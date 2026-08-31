@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research Notes — Oleg Arefev</title>
+<meta name="description" content="Searching for Edge — a public research log testing published crypto trading strategies against real Binance data, note by note.">
+<style>
+  :root {
+    --bg: #0b0e14;
+    --card: #11151d;
+    --border: #1f2733;
+    --text: #e6e9ef;
+    --muted: #8b95a7;
+    --accent: #4fd1c5;
+    --accent2: #f0a35e;
+    --red: #e07a7a;
+    --green: #6fcf97;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 20% -10%, rgba(79,209,197,0.12), transparent 45%),
+      radial-gradient(circle at 90% 10%, rgba(240,163,94,0.10), transparent 40%),
+      var(--bg);
+    color: var(--text);
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem 1rem 4rem;
+  }
+  .wrap { width: 100%; max-width: 720px; }
+  .back {
+    display: inline-block;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-bottom: 1.4rem;
+  }
+  .back:hover { color: var(--accent); }
+  .prompt { color: var(--accent); font-size: 0.85rem; margin-bottom: 0.5rem; }
+  .prompt::before { content: "$ "; color: var(--muted); }
+  h1 { font-size: 1.7rem; margin: 0 0 0.4rem 0; }
+  .sub {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin: 0 0 2rem 0;
+  }
+  .note {
+    display: block;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 0.7rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+  }
+  .note:hover {
+    border-color: var(--accent);
+    background: rgba(79,209,197,0.05);
+    transform: translateX(2px);
+  }
+  .note-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 0.35rem;
+  }
+  .num { color: var(--accent2); font-size: 0.8rem; }
+  .title {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 1.02rem;
+    font-weight: 600;
+  }
+  .badges { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .badge {
+    font-size: 0.68rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    font-family: ui-monospace, SFMono-Regular, monospace;
+  }
+  .b-published { color: var(--accent); border-color: rgba(79,209,197,0.3); }
+  .b-tested { color: var(--green); border-color: rgba(111,207,151,0.3); }
+  .b-lit { color: var(--muted); }
+  .b-open { color: var(--accent2); border-color: rgba(240,163,94,0.3); }
+
+  .footer {
+    margin-top: 2.2rem;
+    padding-top: 1.2rem;
+    border-top: 1px dashed var(--border);
+    font-size: 0.72rem;
+    color: var(--muted);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">&larr; back</a>
+    <div class="prompt">ls research-notes/</div>
+    <h1>Searching for Edge</h1>
+    <p class="sub">A public research log testing published crypto trading strategies against real Binance data. Literature review → replication → gross → net-of-costs → verdict, one note per hypothesis. Closed and negative results are published alongside positive ones.</p>
+
+    <a class="note" href="https://github.com/Silent47boryara/searching-for-edge/blob/main/00-introduction/can-you-trade-crypto-profitably.md">
+      <div class="note-head"><span class="num">00</span><span class="title">Can You Trade Crypto Profitably by Formula?</span></div>
+      <div class="badges"><span class="badge b-published">published</span></div>
+    </a>
+
+    <a class="note" href="https://github.com/Silent47boryara/searching-for-edge/blob/main/01-grid/grid-bot-illusion.md">
+      <div class="note-head"><span class="num">01</span><span class="title">The Grid Bot Illusion</span></div>
+      <div class="badges"><span class="badge b-published">published</span><span class="badge b-lit">literature-based</span></div>
+    </a>
+
+    <a class="note" href="https://github.com/Silent47boryara/searching-for-edge/blob/main/02-momentum/momentum-evidence-from-binance-replication.md">
+      <div class="note-head"><span class="num">02</span><span class="title">Momentum: Evidence from a Binance Replication</span></div>
+      <div class="badges"><span class="badge b-published">published</span><span class="badge b-tested">empirically tested</span></div>
+    </a>
+
+    <a class="note" href="https://github.com/Silent47boryara/searching-for-edge/blob/main/03-trend/trend-when-published-edge-ages.md">
+      <div class="note-head"><span class="num">03</span><span class="title">Trend: When Published Edge Ages</span></div>
+      <div class="badges"><span class="badge b-published">published</span><span class="badge b-lit">literature-based</span></div>
+    </a>
+
+    <a class="note" href="https://github.com/Silent47boryara/searching-for-edge/blob/main/04-carry/carry-a-real-edge-i-wouldnt-trade.md">
+      <div class="note-head"><span class="num">04</span><span class="title">Carry: A Real Edge I Wouldn't Trade</span></div>
+      <div class="badges"><span class="badge b-published">published</span><span class="badge b-tested">empirically tested</span></div>
+    </a>
+
+    <a class="note" href="https://github.com/Silent47boryara/searching-for-edge/blob/main/05-reversal/reversal-two-kinds-of-mean-reversion.md">
+      <div class="note-head"><span class="num">05</span><span class="title">Reversal: Two Kinds of Mean Reversion, One Closed on Sight</span></div>
+      <div class="badges"><span class="badge b-published">published</span><span class="badge b-open">open</span></div>
+    </a>
+
+    <a class="note" href="https://github.com/Silent47boryara/searching-for-edge/blob/main/06-what-is-left/what-is-left-for-a-retail-trader.md">
+      <div class="note-head"><span class="num">06</span><span class="title">What Is Left for a Retail Trader?</span></div>
+      <div class="badges"><span class="badge b-published">published</span><span class="badge b-open">open</span></div>
+    </a>
+
+    <div class="footer">Full repository, methodology and references: <a href="https://github.com/Silent47boryara/searching-for-edge">github.com/Silent47boryara/searching-for-edge</a></div>
+  </div>
+</body>
+</html>
