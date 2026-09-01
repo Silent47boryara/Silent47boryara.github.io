@@ -3,41 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Research Notes — Oleg Arefev</title>
-<meta name="description" content="Searching for Edge — a public research log testing published crypto trading strategies against real Binance data, note by note.">
+<title>Research Notes — Karaptic Research</title>
+<meta name="description" content="Searching for Edge — a public research log testing published crypto trading strategies against real Binance data, note by note. Published by Karaptic Research.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://silent47boryara.github.io/research.html">
-<meta property="og:title" content="Research Notes — Oleg Arefev">
+<meta property="og:title" content="Research Notes — Karaptic Research">
 <meta property="og:description" content="Searching for Edge — a public research log testing published crypto trading strategies against real Binance data, note by note.">
 <meta property="og:image" content="https://silent47boryara.github.io/og-image.png">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1024">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Research Notes — Oleg Arefev">
+<meta name="twitter:title" content="Research Notes — Karaptic Research">
 <meta name="twitter:description" content="Searching for Edge — a public research log testing published crypto trading strategies against real Binance data, note by note.">
 <meta name="twitter:image" content="https://silent47boryara.github.io/og-image.png">
 <style>
   :root {
-    --bg: #0b0e14;
-    --card: #11151d;
-    --border: #1f2733;
-    --text: #e6e9ef;
-    --muted: #8b95a7;
-    --accent: #4fd1c5;
-    --accent2: #f0a35e;
-    --red: #e07a7a;
-    --green: #6fcf97;
+    --bg: #1c140c;
+    --bg2: #241a10;
+    --card: #faf5ec;
+    --border: #e3d5bd;
+    --text: #2a2118;
+    --muted: #7a6c58;
+    --accent: #c9822c;
+    --accent-dark: #8a5a2b;
+    --red: #b5473a;
+    --green: #4f7d4a;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
     min-height: 100vh;
     background:
-      radial-gradient(circle at 20% -10%, rgba(79,209,197,0.12), transparent 45%),
-      radial-gradient(circle at 90% 10%, rgba(240,163,94,0.10), transparent 40%),
-      var(--bg);
+      radial-gradient(circle at 15% -10%, rgba(201,130,44,0.30), transparent 45%),
+      radial-gradient(circle at 90% 0%, rgba(138,90,43,0.25), transparent 45%),
+      linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
     color: var(--text);
-    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     display: flex;
     justify-content: center;
     padding: 2.5rem 1rem 4rem;
@@ -45,49 +46,48 @@
   .wrap { width: 100%; max-width: 720px; }
   .back {
     display: inline-block;
-    color: var(--muted);
+    color: #cbb99a;
     text-decoration: none;
     font-size: 0.8rem;
     margin-bottom: 1.4rem;
   }
   .back:hover { color: var(--accent); }
-  .prompt { color: var(--accent); font-size: 0.85rem; margin-bottom: 0.5rem; }
-  .prompt::before { content: "$ "; color: var(--muted); }
-  h1 { font-size: 1.7rem; margin: 0 0 0.4rem 0; }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.4rem;
+  }
+  .brand img { width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); }
+  .brand .k1 { font-size: 1.1rem; font-weight: 800; color: #f4ead9; }
+  .brand .k2 { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; color: var(--accent); }
+  h1 { font-size: 1.7rem; margin: 0.6rem 0 0.4rem 0; color: #f4ead9; }
   .sub {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    color: var(--muted);
+    color: #cbb99a;
     font-size: 0.92rem;
     line-height: 1.6;
     margin: 0 0 2rem 0;
   }
   .note {
     display: block;
+    background: var(--card);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 1.1rem 1.3rem;
     margin-bottom: 0.7rem;
     text-decoration: none;
     color: var(--text);
-    transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+    transition: border-color 0.15s ease, transform 0.15s ease;
   }
-  .note:hover {
-    border-color: var(--accent);
-    background: rgba(79,209,197,0.05);
-    transform: translateX(2px);
-  }
+  .note:hover { border-color: var(--accent); transform: translateX(2px); }
   .note-head {
     display: flex;
     align-items: baseline;
     gap: 0.6rem;
     margin-bottom: 0.35rem;
   }
-  .num { color: var(--accent2); font-size: 0.8rem; }
-  .title {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    font-size: 1.02rem;
-    font-weight: 600;
-  }
+  .num { color: var(--accent-dark); font-size: 0.8rem; font-family: ui-monospace, SFMono-Regular, monospace; }
+  .title { font-size: 1.02rem; font-weight: 600; }
   .badges { display: flex; flex-wrap: wrap; gap: 0.35rem; }
   .badge {
     font-size: 0.68rem;
@@ -96,18 +96,17 @@
     border: 1px solid var(--border);
     font-family: ui-monospace, SFMono-Regular, monospace;
   }
-  .b-published { color: var(--accent); border-color: rgba(79,209,197,0.3); }
-  .b-tested { color: var(--green); border-color: rgba(111,207,151,0.3); }
+  .b-published { color: var(--accent-dark); border-color: rgba(201,130,44,0.4); }
+  .b-tested { color: var(--green); border-color: rgba(79,125,74,0.35); }
   .b-lit { color: var(--muted); }
-  .b-open { color: var(--accent2); border-color: rgba(240,163,94,0.3); }
+  .b-open { color: var(--red); border-color: rgba(181,71,58,0.35); }
 
   .footer {
     margin-top: 2.2rem;
     padding-top: 1.2rem;
-    border-top: 1px dashed var(--border);
+    border-top: 1px dashed rgba(255,255,255,0.15);
     font-size: 0.72rem;
-    color: var(--muted);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #cbb99a;
   }
   .footer a { color: var(--accent); text-decoration: none; }
 </style>
@@ -115,7 +114,13 @@
 <body>
   <div class="wrap">
     <a class="back" href="index.html">&larr; back</a>
-    <div class="prompt">ls research-notes/</div>
+    <div class="brand">
+      <img src="og-image.png" alt="Karaptic Research">
+      <div>
+        <div class="k1">KARAPTIC</div>
+        <div class="k2">RESEARCH</div>
+      </div>
+    </div>
     <h1>Searching for Edge</h1>
     <p class="sub">A public research log testing published crypto trading strategies against real Binance data. Literature review → replication → gross → net-of-costs → verdict, one note per hypothesis. Closed and negative results are published alongside positive ones.</p>
 
