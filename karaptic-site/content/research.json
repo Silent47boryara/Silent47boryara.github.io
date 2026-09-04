@@ -1,0 +1,89 @@
+[
+  {
+    "num": "00",
+    "slug": "can-you-trade-crypto-profitably",
+    "title": "Can You Trade Crypto Profitably by Formula?",
+    "abstract": "Introduces the series and its method. An audit of roughly 200 pre-built trading strategies on a marketplace (a \"CMC Skill Hub\") found that most rest on the same public metrics anyone can compute for free. Klines, an event-driven Binance volume-spike detector built beforehand, showed that detecting an abnormal move is easier than knowing whether it continues. That is the fork that leads into this series. Four independent hypothesis classes, momentum, trend, funding carry, and reversal, are then run through one fixed protocol: literature review, mechanism reconstruction, replication on Binance data, gross result, net-of-costs, and a significance test. Grid bots are treated separately as an execution-economics question. A hard rule: at most two independently published implementations are tested per class; if both fail, the class is closed.",
+    "source": "https://github.com/Silent47boryara/searching-for-edge/blob/main/00-introduction/can-you-trade-crypto-profitably.md",
+    "badges": [
+      "published"
+    ],
+    "ssrn": null
+  },
+  {
+    "num": "01",
+    "slug": "grid-bot-illusion",
+    "title": "The Grid Bot Illusion",
+    "abstract": "Asks whether grid trading produces an independent trading edge, or whether its returns come from market exposure, execution economics, and market-making infrastructure. Chen, Chen & Jang derive analytically that, under a symmetric random walk, a classical grid's expected profit is zero before costs. Dynamic Grid Trading beats buy-and-hold, but the authors attribute the gain largely to the period's cumulative rise in BTC/ETH: retained beta, not market-neutral alpha. Nguyen & Bui's delta-neutral grid market making reports roughly 37% over 52 days, but carries an unresolved capital-sizing inconsistency and a fill model that ignores queue position; a maker-fee-tier check shows the reported spread flips negative at standard retail rates. Verdict: grid is not itself a source of edge. As implementations grow more sophisticated, the return source shifts toward spread capture, fee structure, and execution quality.",
+    "source": "https://github.com/Silent47boryara/searching-for-edge/blob/main/01-grid/grid-bot-illusion.md",
+    "badges": [
+      "published",
+      "literature-based"
+    ],
+    "ssrn": {
+      "url": "https://ssrn.com/abstract=7376359",
+      "label": "SSRN 7376359",
+      "note": "working paper, DOI 10.2139/ssrn.7376359"
+    }
+  },
+  {
+    "num": "02",
+    "slug": "momentum-binance-replication",
+    "title": "Momentum: Evidence from a Binance Replication",
+    "abstract": "Tests whether a cross-sectional momentum spread survives on Binance USDⓈ-M perpetuals net of realistic costs, not just in an academic backtest. Liu, Tsyvinski & Wu document momentum as statistically significant across a broad crypto sample; Starkiller Capital's practitioner backtest beat the market in relative terms through the 2021–2022 bear market without an absolute profit, and named a 125-basis-point cost threshold that kills the effect. The project's own replication (832 Binance perpetual symbols, daily panel, 2020–2026) finds a gross weekly spread of +0.573%, but a Binance taker fee plus slippage consumes about 70% of it, leaving the net spread indistinguishable from zero on all three significance tests (bootstrap CI, sign-flip, permutation). A literature-mandated second specification (J=2/K=2) also fails, its sign flipping with an arbitrary rebalancing-phase choice. Momentum is real in the literature; it does not clear this project's cost bar on Binance.",
+    "source": "https://github.com/Silent47boryara/searching-for-edge/blob/main/02-momentum/momentum-evidence-from-binance-replication.md",
+    "badges": [
+      "published",
+      "empirically tested"
+    ],
+    "ssrn": null
+  },
+  {
+    "num": "03",
+    "slug": "trend-when-published-edge-ages",
+    "title": "Trend: When Published Edge Ages",
+    "abstract": "Asks whether time-series momentum (well established on traditional assets by Moskowitz, Ooi & Pedersen) still holds in crypto today, or whether early favorable evidence (Liu & Tsyvinski, pre-2018 data) described a regime that has since passed. Grobys, Kolari, Sandretto, Shahzad & Äijö's 2025 study, the longest and most recent available (2016–2023, 30 large-cap coins), splits the sample by regime: strong pre-July-2020, but negative and not statistically significant in the post-July-2020 period that matters for a trader today. A single extreme outlier (Mindol, +1,400% in a day) drives much of the raw sample's insignificance; volatility-managed sizing improves the full-sample number without establishing that it survives the regime split. A broader, literature-tested 2,500-coin universe is also not a reproducible single-venue retail portfolio and posts a significantly negative spread regardless. Closed at the literature stage: no Binance replication run.",
+    "source": "https://github.com/Silent47boryara/searching-for-edge/blob/main/03-trend/trend-when-published-edge-ages.md",
+    "badges": [
+      "published",
+      "literature-based"
+    ],
+    "ssrn": null
+  },
+  {
+    "num": "04",
+    "slug": "carry-real-edge",
+    "title": "Carry: A Real Edge I Wouldn't Trade",
+    "abstract": "Perpetual funding carry arrives with strong academic backing: He, Manela, Ross & von Wachter report a Sharpe of 1.80 for a spot-short-perpetual carry trade, and Schmeling, Schrimpf & Todorov document crypto carry averaging roughly 7%/year on a fixed-date basis. All the cited papers also document the effect shrinking, as leverage limits tighten, arbitrage capital grows, and the 2024 spot Bitcoin ETF compresses the basis. The project's own measurement (636 eight-hour Binance funding periods per coin, November 2025–May 2026) finds mean annualized funding of +2.11% for BTC and +1.63% for ETH, both far below the project's pre-registered 14% capital-allocation hurdle and even below the roughly 4.0–4.5% available from FDIC-insured US savings accounts and CDs. The second candidate, fixed-date basis, is closed at the literature stage: its own reported ~7%/year average sits below the hurdle before any adjustment. Verdict: not falsified, but priced out.",
+    "source": "https://github.com/Silent47boryara/searching-for-edge/blob/main/04-carry/carry-a-real-edge-i-wouldnt-trade.md",
+    "badges": [
+      "published",
+      "empirically tested"
+    ],
+    "ssrn": null
+  },
+  {
+    "num": "05",
+    "slug": "reversal",
+    "title": "Reversal: Two Kinds of Mean Reversion, One Closed on Sight",
+    "abstract": "The literature contains two unrelated strategies both called \"reversal.\" Branch A (Dobrynskaya): buy coins that just crashed, hold 10–12 weeks, a bubble-and-burst pattern found on a roughly 2,000-coin CoinMarketCap sample, 2014–2020. Closed without replication: the paper has no delisting or survivorship treatment for exactly the loser leg most exposed to it, the sample predates Terra/Luna and FTX, and the diversified academic basket has no honest translation into a concentrated retail portfolio. Branch B (Bianchi, Babiak & Dickerson): a short-term, market-making-style reversal in low-volume pairs, rebalanced daily. Their own exchange breakdown shows the effect flips negative net-of-fees on Binance (−0.213%/day equal-weighted) but stays positive on GateIO (+0.811%/day net, equal-weighted). This branch is left open, pending the project's own replication on current Gate.io data and fee schedule.",
+    "source": "https://github.com/Silent47boryara/searching-for-edge/blob/main/05-reversal/reversal-two-kinds-of-mean-reversion.md",
+    "badges": [
+      "published",
+      "open"
+    ],
+    "ssrn": null
+  },
+  {
+    "num": "06",
+    "slug": "retail-trader-klines",
+    "title": "What Is Left for a Retail Trader?",
+    "abstract": "Unlike the rest of the series, this note goes system-first: Klines, an event detector built from months of manual replay of Binance volume spikes, is checked against the academic literature only after it had a stable shape: eleven papers covering why volume anomalies predict returns, how exits should be managed (triple-barrier, maximum adverse excursion), and what remains genuinely open. On the larger, pre-patch walk-forward sample, the core \"ALIVE\" tier shows an 85% win rate and the narrower \"ROCKET\" tier 100%, stable across eleven weekly cohorts; a newer, more honestly timed log (real detection timestamps instead of a hardcoded offset) shows a materially weaker 63.6% ALIVE win rate on a smaller sample. Every number is priced at a paper fill: the named open gap. Klines is semi-automatic, not automated, runs in paper execution, and its profitability is not established.",
+    "source": "https://github.com/Silent47boryara/searching-for-edge/blob/main/06-what-is-left/what-is-left-for-a-retail-trader.md",
+    "badges": [
+      "published",
+      "open"
+    ],
+    "ssrn": null
+  }
+]

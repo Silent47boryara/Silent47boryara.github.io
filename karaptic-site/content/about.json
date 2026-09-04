@@ -1,0 +1,37 @@
+[
+  {
+    "title": "What Karaptic Research is",
+    "paragraphs": [
+      "Karaptic Research is an independent research initiative on cryptocurrency markets, market structure, and systematic trading. It is not a fund, not a signal service, and not a consultancy. It publishes what it finds, including findings that close a line of work rather than open one.",
+      "It exists because most public material on crypto trading strategies is promotional: a mechanism is described, a favourable result is shown, and the conditions that produced that result are left out. The distance between a number being real and a number being reachable by an ordinary trader on a real account is the actual subject of this work."
+    ]
+  },
+  {
+    "title": "How the research is done",
+    "paragraphs": [
+      "The protocol is stated plainly and applied without exceptions: literature first, with a published claim taken at face value and its mechanism reconstructed before any of our own data is touched, then replication on real Binance data where replication is possible, then a gross result, then the same result net of realistic execution costs, then a test of whether what remains is statistically distinguishable from zero.",
+      "Two rules hold across the series. A maximum of two independently published implementations is tested per hypothesis class; if both fail, the class is closed, and no third variant is tried to save it. And a closed hypothesis is published in the same detail as a surviving one. So far this has produced more closed hypotheses than open ones: the expected outcome, not a disappointing one. See Research Notes for the results and the full repository for methodology, code, and data."
+    ]
+  },
+  {
+    "title": "What is ours: Klines",
+    "paragraphs": [
+      "Klines is an event-detection system for Binance, built before this research series began, out of months of minute-by-minute replay and case-by-case review of volume spikes rather than out of a paper. It detects abnormal volume and price acceleration, gathers context around each event, and tracks what follows.",
+      "Klines is semi-automatic, not fully automated: detection, tiering, and a short monitoring window run without a person watching every candle, but the decision to size into a specific trade stays a manual check on top of the automated signal. It currently runs in paper execution. Its profitability is not established: replay results are not live results, and execution validation (real fill, real slippage, real reaction time) is ongoing. It is not published in full. Research Note 06 is the direct, honest account of what it is and what remains open."
+    ]
+  },
+  {
+    "title": "Who is behind it",
+    "paragraphs": [
+      "Oleg Arefev. Partner and business development at Legal Kornet, working in support of IT and crypto projects: structuring, regulatory workflow, and the practical side of getting a project operational. He is not a lawyer, does not practise law, and this page does not describe him as one. Research is a separate track, run independently of that work and published under its own name.",
+      "The combination shapes what gets asked here: someone who spends working hours on how projects are actually structured, and what they are actually permitted to do, tends to notice when a reported trading result quietly depends on a fee tier, an account size, or a venue most people cannot reach."
+    ]
+  },
+  {
+    "title": "Join",
+    "paragraphs": [
+      "This is an open invitation, not a call to action for a product. If you have a hypothesis worth testing, propose it. If you think a published result is wrong, including one published here, say so. And if your question is the plain one, how an ordinary trader should actually approach this market, that is worth discussing in the open rather than answering with a product.",
+      "Start a discussion in the repository."
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>What Is Left for a Retail Trader? — Karaptic Research</title><meta name="description" content="Unlike the rest of the series, this note goes system-first: Klines, an event detector built from months of manual replay of Binance volume spikes, is checked against the academic literature only after it had a stable shape: eleven papers covering why volume anomalies predict returns, how exits should be managed (triple-barrier, maximum adverse excursion), and what remains genuinely open. On the larger, pre-patch walk-forward sample, the core &quot;ALIVE&quot; tier shows an 85% win rate and the narrower &quot;ROCKET&quot; tier 100%, stable across eleven weekly cohorts; a newer, more honestly timed log (real detection timestamps instead of a hardcoded offset) shows a materially weaker 63.6% ALIVE win rate on a smaller sample. Every number is priced at a paper fill: the named open gap. Klines is semi-automatic, not automated, runs in paper execution, and its profitability is not established.">
+  <link rel="canonical" href="https://karaptic.com/research/retail-trader-klines/"><meta property="og:type" content="article"><meta property="og:url" content="https://karaptic.com/research/retail-trader-klines/">
+  <meta property="og:title" content="What Is Left for a Retail Trader? — Karaptic Research"><meta property="og:description" content="Unlike the rest of the series, this note goes system-first: Klines, an event detector built from months of manual replay of Binance volume spikes, is checked against the academic literature only after it had a stable shape: eleven papers covering why volume anomalies predict returns, how exits should be managed (triple-barrier, maximum adverse excursion), and what remains genuinely open. On the larger, pre-patch walk-forward sample, the core &quot;ALIVE&quot; tier shows an 85% win rate and the narrower &quot;ROCKET&quot; tier 100%, stable across eleven weekly cohorts; a newer, more honestly timed log (real detection timestamps instead of a hardcoded offset) shows a materially weaker 63.6% ALIVE win rate on a smaller sample. Every number is priced at a paper fill: the named open gap. Klines is semi-automatic, not automated, runs in paper execution, and its profitability is not established.">
+  <meta property="og:image" content="https://karaptic.com/assets/karaptic-road-clean.png"><meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any"><link rel="icon" href="/assets/karaptic-favicon.svg?v=2" type="image/svg+xml"><link rel="icon" href="/assets/karaptic-favicon-32.png?v=2" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="/assets/karaptic-apple-touch-icon.png?v=2"><meta name="theme-color" content="#11130f"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"What Is Left for a Retail Trader?","description":"Unlike the rest of the series, this note goes system-first: Klines, an event detector built from months of manual replay of Binance volume spikes, is checked against the academic literature only after it had a stable shape: eleven papers covering why volume anomalies predict returns, how exits should be managed (triple-barrier, maximum adverse excursion), and what remains genuinely open. On the larger, pre-patch walk-forward sample, the core \"ALIVE\" tier shows an 85% win rate and the narrower \"ROCKET\" tier 100%, stable across eleven weekly cohorts; a newer, more honestly timed log (real detection timestamps instead of a hardcoded offset) shows a materially weaker 63.6% ALIVE win rate on a smaller sample. Every number is priced at a paper fill: the named open gap. Klines is semi-automatic, not automated, runs in paper execution, and its profitability is not established.","author":{"@type":"Person","name":"Oleg Arefev"},"publisher":{"@type":"Organization","name":"Karaptic Research"},"url":"https://karaptic.com/research/retail-trader-klines/","sameAs":"https://github.com/Silent47boryara/searching-for-edge/blob/main/06-what-is-left/what-is-left-for-a-retail-trader.md"}</script>
+</head><body class="article-page">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Karaptic Research home">
+      <span class="brand-mark"><img src="/assets/karaptic-logo.png" alt=""></span>
+      <span class="brand-name">Karaptic<br>Research</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a aria-current="page" href="/research/">Research</a>
+      <div class="nav-group">
+        <a  href="/labs/">Labs <span aria-hidden="true">⌄</span></a>
+        <div class="nav-menu"><a href="/labs/klines/"><small>01</small><strong>Klines</strong><span>Event detection for Binance</span></a></div>
+      </div>
+      <a  href="/blog/">Blog</a>
+      <a  href="/about/">About</a>
+      <a  href="/contact/">Contact</a>
+    </nav>
+    <a class="github-link" href="https://github.com/Silent47boryara/searching-for-edge">GitHub ↗</a>
+    <details class="mobile-nav"><summary aria-label="Open navigation">Menu</summary><div>
+      <a href="/research/">Research</a><a href="/labs/">Labs</a><a href="/labs/klines/">— Klines</a><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/">Contact</a>
+    </div></details>
+  </header><main>
+    <article class="article-shell"><aside class="article-rail"><a href="/research/">← Research index</a><strong>06</strong><div class="badges vertical"><span>published</span><span>open</span></div></aside>
+      <div class="article-body"><p class="kicker">Research Note 06</p><h1>What Is Left for a Retail Trader?</h1><p class="article-deck">Unlike the rest of the series, this note goes system-first: Klines, an event detector built from months of manual replay of Binance volume spikes, is checked against the academic literature only after it had a stable shape: eleven papers covering why volume anomalies predict returns, how exits should be managed (triple-barrier, maximum adverse excursion), and what remains genuinely open. On the larger, pre-patch walk-forward sample, the core &quot;ALIVE&quot; tier shows an 85% win rate and the narrower &quot;ROCKET&quot; tier 100%, stable across eleven weekly cohorts; a newer, more honestly timed log (real detection timestamps instead of a hardcoded offset) shows a materially weaker 63.6% ALIVE win rate on a smaller sample. Every number is priced at a paper fill: the named open gap. Klines is semi-automatic, not automated, runs in paper execution, and its profitability is not established.</p>
+        
+        <div class="article-actions"><a class="button blue" href="https://github.com/Silent47boryara/searching-for-edge/blob/main/06-what-is-left/what-is-left-for-a-retail-trader.md">Full note, code & references <span>↗</span></a><a class="line-link" href="/research/">All research notes</a></div>
+        <p class="source-note">This page preserves the approved research abstract in full. The working repository contains the complete note, methodology, code, data, and references.</p>
+      </div></article></main>
+  <footer class="site-footer">
+    <a class="footer-brand" href="/">Karaptic <em>Research</em></a>
+    <p>Independent research on cryptocurrency markets,<br>market structure, and systematic trading.</p>
+    <div class="footer-links"><a href="/research/">Research</a><a href="/about/">About</a><a href="https://github.com/Silent47boryara/searching-for-edge">GitHub ↗</a></div>
+    <p class="footer-meta">Independent · self-published · negative results included <span>Est. 2026</span></p>
+  </footer></body></html>
